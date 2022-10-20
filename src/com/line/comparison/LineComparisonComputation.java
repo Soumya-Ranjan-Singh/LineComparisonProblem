@@ -1,6 +1,7 @@
 //This program is to display the Welcome message to Line Comparison Computation Program.
 //Use Case-1 is to measure the length of the line by following Cartesian System.
 //Use Case-2 is to check equality of two lines based on the end points.
+//Use Case-3
 
 package com.line.comparison;
 
@@ -21,10 +22,13 @@ public class LineComparisonComputation {
         Scanner scan = new Scanner(System.in);
         String s1 = "Line 1";
         String s2 = "Line 2";
-        String l1 = Double.toString(setLines(scan,s1));
+        Double l1 = setLines(scan,s1);
         System.out.println();
-        String l2 = Double.toString(setLines(scan,s2));
+        Double l2 = setLines(scan,s2);
+        System.out.println();
         checkEquality(l1,l2);
+        System.out.println();
+        comparingLines(l1,l2);
 
     }
 
@@ -54,10 +58,22 @@ public class LineComparisonComputation {
         return length;
     }
 
-    //Checking if both are equals or not
-    public static void checkEquality(String l1, String l2) {
+    //Checking if both are equals or not.
+    public static void checkEquality(Double l1, Double l2) {
         boolean equal = l1.equals(l2);
         System.out.println("Equality of two lines using Java equals method is : "+equal);
+    }
+
+    //Comparing both of the lines.
+    public static void comparingLines(Double l1, Double l2) {
+        int comp = l1.compareTo(l2);
+        System.out.println("Comparing two lines using Java compareTo method is: "+comp);
+        if (comp > 0)
+            System.out.println("Line-1 is greater than Line-2");
+        else if (comp == 0)
+            System.out.println("Line-1 is equal to Line-2");
+        else
+            System.out.println("Line-1 is smaller than Line-2");
     }
 
 }
