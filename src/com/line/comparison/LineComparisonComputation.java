@@ -1,7 +1,7 @@
 //This program is to display the Welcome message to Line Comparison Computation Program.
 //Use Case-1 is to measure the length of the line by following Cartesian System.
 //Use Case-2 is to check equality of two lines based on the end points.
-//Use Case-3
+//Use Case-3 is to compare two lines based on the end points, so that we know one line is equal, greater or less than the other line.
 
 package com.line.comparison;
 
